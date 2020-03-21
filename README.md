@@ -16,4 +16,11 @@ To make our project more aesthetic, we decided to design a couple of flowers, wh
 
 ![lotus](lotus.png)
 
-This lotus-like flower can be attached to the lampshade in this way (Here will be the photo)
+This lotus-like flower can be attached to the lampshade in this way (Here will be the photo)<br/>
+
+This project has in total 6 pieces: 
+* 2 removable pieces of lampshade
+* 2 lotus flowers with threads
+* 2 nuts<br/>
+
+All in all, our project *Chyrak* is a piece of decor for a house. Instead of buying expensive chandeliers, one could simply print this lampshade in 3D printer as many pieces as he/she wants and attach it to the lamp. This lampshade can replace a chandelier and doesn't concede to any piece of lamp decoration.  
