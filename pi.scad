@@ -62,6 +62,7 @@ module golden_spiral_for_pentals(from, to) {
 	}
 }
 
+<<<<<<< HEAD
 module lotus(spirals, petals_per_spiral) {
     $fn = 24;
 
@@ -102,6 +103,13 @@ union(){
     metric_thread(diameter=radius_lotus+error,pitch=6,length=thread_height);
 }
 */
+=======
+
+include <threads.scad>;
+radius_lotus = scaling_factor*(fibonacci(petals_per_spiral+1) - fibonacci(petals_per_spiral));
+
+
+>>>>>>> origin/chyrak
 rotate([0,90,0])
 translate([0,0,radius+thread_height*scale_flower/2])
 scale(scale_flower)
