@@ -63,45 +63,11 @@ module golden_spiral_for_pentals(from, to) {
 	}
 }
 
-module lotus(spirals, petals_per_spiral) {
-    $fn = 24;
-
-    step_angle = 360 / spirals;
-	for(i = [0:spirals - 1]) {
-		rotate(step_angle * i) 
-		    golden_spiral_for_pentals(1, petals_per_spiral);
-	}
-
-	fib_diff = fibonacci(petals_per_spiral) - fibonacci(petals_per_spiral - 1);
-
-
-	translate([0, 0, -fib_diff]) scale([1, 1, fib_diff]) sphere(1);
-	translate([0, 0, -fib_diff * 2.25]) difference() {
-		sphere(fib_diff);
-		translate([-fib_diff, -fib_diff, -fib_diff * 2]) cube(fib_diff * 2);
-	}
-}
 
 include <threads.scad>;
 radius_lotus = scaling_factor*(fibonacci(petals_per_spiral+1) - fibonacci(petals_per_spiral));
-translate([-200,0,0])
-scale(scale_flower)
-union(){
-    scale(scaling_factor)
-    translate([0,0,11.3])
-    lotus(spirals, petals_per_spiral + 1);
-    translate([0,0,-thread_height])
-    metric_thread(diameter=radius_lotus+error,pitch=6,length=thread_height);
-}
-translate([200,0,0])
-scale(scale_flower)
-union(){
-    scale(scaling_factor)
-    translate([0,0,11.3])
-    lotus(spirals, petals_per_spiral + 1);
-    translate([0,0,-thread_height])
-    metric_thread(diameter=radius_lotus+error,pitch=6,length=thread_height);
-}
+
+
 rotate([0,90,0])
 translate([0,0,radius+thread_height*scale_flower/2])
 scale(scale_flower)
