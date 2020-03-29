@@ -5,7 +5,6 @@ scaling_factor = 15;
 thread_height = 40;
 error = 0.01;
 scale_flower = 0.3;
-PI = 3.14159;
 chars_per_circle = 40;
 radius = 70;
 step_angle = 360 / chars_per_circle;
@@ -31,7 +30,7 @@ function fibonacci(n) =
 	);
 	
 	
-module petal(radius, thickness) {
+/*module petal(radius, thickness) {
     $fn = 24;
 	translate([-radius * 1.5, 0, radius * 2]) rotate([90, 120, 90]) intersection() {
 		difference() {
@@ -81,10 +80,10 @@ module lotus(spirals, petals_per_spiral) {
 		translate([-fib_diff, -fib_diff, -fib_diff * 2]) cube(fib_diff * 2);
 	}
 }
-
+*/
 include <threads.scad>;
 radius_lotus = scaling_factor*(fibonacci(petals_per_spiral+1) - fibonacci(petals_per_spiral));
-translate([-200,0,0])
+/*translate([-200,0,0])
 scale(scale_flower)
 union(){
     scale(scaling_factor)
@@ -102,6 +101,7 @@ union(){
     translate([0,0,-thread_height])
     metric_thread(diameter=radius_lotus+error,pitch=6,length=thread_height);
 }
+*/
 rotate([0,90,0])
 translate([0,0,radius+thread_height*scale_flower/2])
 scale(scale_flower)
